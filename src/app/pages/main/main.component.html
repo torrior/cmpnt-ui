@@ -1,28 +1,17 @@
-<div class="main-container">
+<div class="page-content">
   <div class="main-container-wrapper">
-    <mat-drawer-container class="drawer-container">
-      <mat-drawer #drawer [mode]="'side'">I'm a drawer</mat-drawer>
-      <mat-drawer-content class="pt-4 ps-4">
-        <mat-form-field appearance="fill">
-          <mat-label>Sidenav mode</mat-label>
-          <mat-select #mode value="side">
-            <mat-option value="side">Side</mat-option>
-            <mat-option value="over">Over</mat-option>
-            <mat-option value="push">Push</mat-option>
-          </mat-select>
-        </mat-form-field>
-        <mat-form-field appearance="fill">
-          <mat-label>Has backdrop</mat-label>
-          <mat-select #hasBackdrop>
-            <mat-option>Unset</mat-option>
-            <mat-option [value]="true">True</mat-option>
-            <mat-option [value]="false">False</mat-option>
-          </mat-select>
-        </mat-form-field>
-        <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
-        <button mat-raised-button (click)="drawerEnd.toggle()">Toggle drawer end</button>
-      </mat-drawer-content>
-      <mat-drawer #drawerEnd [mode]="'side'" position="end">I'm a drawer</mat-drawer>
-    </mat-drawer-container>
+    <div class="row">
+      <div class="col-md-7" style="background-color: #f2f6fc">
+        <div class="wrapper">
+          <div class="title">
+            <h1>
+              CMPNT UI/UX
+            </h1>
+            <div class="description mt-4">Represents the most important action on a screen UI/UX. Set of open source components for Angular.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5" style="background-color: #c2e7ff"></div>
+    </div>
   </div>
 </div>
