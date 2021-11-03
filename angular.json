@@ -36,9 +36,8 @@
             ],
             "styles": [
               "src/styles/fonts.scss",
-              "src/styles/main-theme.scss",
-              "src/styles/normalize.scss",
               "src/styles/grid.scss",
+              "src/styles/main-theme.scss",
               "src/styles/styles.scss"
             ],
             "scripts": []

@@ -1,3 +1,333 @@
 /* You can add global styles to this file, and also import other style files */
 @import "variables";
-@import "overwriting";
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+    content: "";
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+:root {
+    --mio-theme-display-font-family: var(--font-family-sans-serif), sans-serif;
+    --mio-theme-text-font-family: var(--font-family-sans-serif), sans-serif;
+    --mio-theme-mono-font-family: var(--font-family-sans-serif), sans-serif;
+    --mio-theme-display-xxl-font-family: var(--mio-theme-display-font-family);
+    --mio-theme-display-xxl-font-size: 64px;
+    --mio-theme-display-xxl-line-height: 72px;
+    --mio-theme-display-xxl-font-weight: 500;
+    --mio-theme-display-xl-font-family: var(--mio-theme-display-font-family);
+    --mio-theme-display-xl-font-size: 45px;
+    --mio-theme-display-xl-line-height: 52px;
+    --mio-theme-display-xl-font-weight: 500;
+    --mio-theme-display-l-font-family: var(--mio-theme-display-font-family);
+    --mio-theme-display-l-font-size: 32px;
+    --mio-theme-display-l-line-height: 40px;
+    --mio-theme-display-l-font-weight: 500;
+    --mio-theme-display-m-font-family: var(--mio-theme-display-font-family);
+    --mio-theme-display-m-font-size: 24px;
+    --mio-theme-display-m-line-height: 32px;
+    --mio-theme-display-m-font-weight: 500;
+    --mio-theme-headline-l-font-family: var(--mio-theme-display-font-family);
+    --mio-theme-headline-l-font-size: 24px;
+    --mio-theme-headline-l-line-height: 32px;
+    --mio-theme-headline-l-font-weight: 400;
+    --mio-theme-title-l-font-family: var(--mio-theme-text-font-family);
+    --mio-theme-title-l-font-size: 18px;
+    --mio-theme-title-l-line-height: 24px;
+    --mio-theme-title-l-font-weight: 500;
+    --mio-theme-title-m-font-family: var(--mio-theme-text-font-family);
+    --mio-theme-title-m-font-size: 16px;
+    --mio-theme-title-m-line-height: 24px;
+    --mio-theme-title-m-font-weight: 500;
+    --mio-theme-body-l-font-family: var(--mio-theme-text-font-family);
+    --mio-theme-body-l-font-size: 16px;
+    --mio-theme-body-l-line-height: 24px;
+    --mio-theme-body-l-font-weight: 400;
+    --mio-theme-body-m-font-family: var(--mio-theme-text-font-family);
+    --mio-theme-body-m-font-size: 14px;
+    --mio-theme-body-m-line-height: 20px;
+    --mio-theme-body-m-font-weight: 400;
+    --mio-theme-label-l-font-family: var(--mio-theme-text-font-family);
+    --mio-theme-label-l-font-size: 14px;
+    --mio-theme-label-l-line-height: 20px;
+    --mio-theme-label-l-font-weight: 500;
+    --mio-theme-code-font-family: var(--mio-theme-mono-font-family);
+    --mio-theme-code-font-size: 16px;
+    --mio-theme-code-line-height: 24px;
+    --mio-theme-code-font-weight: 400;
+    --mio-theme-color-white: #fff;
+    --mio-theme-color-on-background: #1f1f1f;
+    --mio-theme-color-background: var(--mio-theme-color-white);
+    --mio-theme-color-on-surface: #1f1f1f;
+    --mio-theme-color-on-surface-variant: #444746;
+    --mio-theme-color-on-surface-inverse: #f2f2f2;
+    --mio-theme-color-surface-0: var(--mio-theme-color-white);
+    --mio-theme-color-surface-1: #f6f8fc;
+    --mio-theme-color-surface-2: #f2f6fc;
+    --mio-theme-color-surface-3: #eef3fc;
+    --mio-theme-color-surface-4: #edf2fc;
+    --mio-theme-color-surface-5: ##eaf1fb;
+    --mio-theme-color-surface-variant: #e1e3e1;
+    --mio-theme-color-surface-inverse: #303030;
+    --mio-theme-color-primary: #0b57d0;
+    --mio-theme-color-primary-200: #a8c7fa;
+    --mio-theme-color-primary-700: #0842a0;
+    --mio-theme-color-primary-800: #062e6f;
+    --mio-theme-color-on-primary: var(--mio-theme-color-white);
+    --mio-theme-color-primary-container: #d3e3fd;
+    --mio-theme-color-on-primary-container: #041e49;
+    --mio-theme-color-secondary: #00639c;
+    --mio-theme-color-on-secondary: var(--mio-theme-color-white);
+    --mio-theme-color-secondary-container: #c2e7ff;
+    --mio-theme-color-on-secondary-container: #001d35;
+    --mio-theme-color-tertiary-container: #c4eed0;
+    --mio-theme-color-on-tertiary-container: #072711;
+    --mio-theme-color-utility-error: #b3261e;
+    --mio-theme-color-utility-on-error: var(--mio-theme-color-white);
+    --mio-theme-color-utility-outline: #747775;
+    --mio-theme-color-extensions-on-affirmative-container: #131f0d;
+    --mio-theme-color-extensions-affirmative-container: #d9e7cb;
+    --mio-theme-color-extensions-on-affirmative: var(--mio-theme-color-white);
+    --mio-theme-color-extensions-affirmative: #386a20;
+    --mio-theme-color-extensions-on-caution-container: #2c1600;
+    --mio-theme-color-extensions-caution-container: #feefc3;
+    --mio-theme-color-extensions-on-caution: var(--mio-theme-color-white);
+    --mio-theme-color-extensions-caution: #89660d;
+    --mio-theme-color-extensions-on-error-container: #2c1516;
+    --mio-theme-color-extensions-error-container: #ffdad9;
+    --mio-theme-color-extensions-on-error: var(--mio-theme-color-white);
+    --mio-theme-color-extensions-error: #9c4146;
+    --mio-theme-color-ref-secondary-200: #7fcfff;
+    --mio-theme-color-ref-secondary-300: #5ab3f0;
+    --mio-theme-color-ref-neutral-100: #e3e3e3;
+    --mio-theme-color-ref-neutral-200: #c7c7c7;
+    --mio-theme-color-ref-neutral-variant-50: #eef3fc;
+    -webkit-font-smoothing: antialiased;
+}
+mwc-button {
+    --mdc-typography-button-font-family: var(--mio-theme-label-l-font-family);
+    --mdc-typography-button-font-size: var(--mio-theme-label-l-font-size);
+    --mdc-typography-button-line-height: var(--mio-theme-label-l-line-height);
+    --mdc-typography-button-font-weight: var(--mio-theme-label-l-font-weight);
+    --mdc-typography-button-text-transform: capitalize;
+    --mdc-typography-button-letter-spacing: 0;
+}
+* {
+    box-sizing: border-box;
+}
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+body {
+    font-family: var(--mio-theme-body-l-font-family);
+    font-size: var(--mio-theme-body-l-font-size);
+    font-weight: var(--mio-theme-body-l-font-weight);
+    line-height: var(--mio-theme-body-l-line-height);
+    color: var(--mio-theme-color-on-background);
+}
+h2,
+h4,
+h5,
+h6 {
+    margin: 32px 0;
+}
+h1 {
+    font-family: var(--mio-theme-display-xxl-font-family);
+    font-size: var(--mio-theme-display-xxl-font-size);
+    font-weight: var(--mio-theme-display-xxl-font-weight);
+    line-height: var(--mio-theme-display-xxl-line-height);
+    margin: 0;
+}
+h2 {
+    font-family: var(--mio-theme-display-xl-font-family);
+    font-size: var(--mio-theme-display-xl-font-size);
+    font-weight: var(--mio-theme-display-xl-font-weight);
+    line-height: var(--mio-theme-display-xl-line-height);
+}
+h3 {
+    font-family: var(--mio-theme-display-l-font-family);
+    font-size: var(--mio-theme-display-l-font-size);
+    font-weight: var(--mio-theme-display-l-font-weight);
+    line-height: var(--mio-theme-display-l-line-height);
+    margin: 16px 0;
+}
+h4 {
+    font-family: var(--mio-theme-display-m-font-family);
+    font-size: var(--mio-theme-display-m-font-size);
+    font-weight: var(--mio-theme-display-m-font-weight);
+    line-height: var(--mio-theme-display-m-line-height);
+}
+h5 {
+    font-family: var(--mio-theme-title-l-font-family);
+    font-size: var(--mio-theme-title-l-font-size);
+    font-weight: var(--mio-theme-title-l-font-weight);
+    line-height: var(--mio-theme-title-l-line-height);
+}
+h6 {
+    font-family: var(--mio-theme-title-m-font-family);
+    font-size: var(--mio-theme-title-m-font-size);
+    font-weight: var(--mio-theme-title-m-font-weight);
+    line-height: var(--mio-theme-title-m-line-height);
+}
+b,
+strong {
+    font-weight: 500;
+}
+a {
+    font-family: var(--mio-theme-title-m-font-family);
+    font-size: var(--mio-theme-title-m-font-size);
+    font-weight: var(--mio-theme-title-m-font-weight);
+    line-height: var(--mio-theme-title-m-line-height);
+    border-radius: 4px;
+    color: var(--mio-theme-color-primary);
+    text-decoration: underline;
+}
+a:hover {
+    color: var(--mio-theme-color-on-primary-container);
+}
+a:focus {
+    outline: 0;
+    box-shadow: 0 0 0 1px var(--mio-theme-color-primary);
+}
+a:hover:focus {
+    outline: 0;
+    color: var(--mio-theme-color-on-primary-container);
+    box-shadow: 0 0 0 1px var(--mio-theme-color-on-primary-container);
+}
+p {
+    -webkit-margin-before: 1em;
+    margin-block-start: 1em;
+    -webkit-margin-after: 1em;
+    margin-block-end: 1em;
+}
+code {
+    font-family: var(--mio-theme-code-font-family);
+    font-size: var(--mio-theme-code-font-size);
+    font-weight: var(--mio-theme-code-font-weight);
+    line-height: var(--mio-theme-code-line-height);
+    padding: 0 2px;
+    border-radius: 2px;
+    background: var(--mio-theme-color-ref-neutral-variant-50);
+}
+ul {
+    list-style: initial;
+}
