@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@charset "utf-8";
+
 @import "variables";
+
 
 a,
 abbr,
@@ -220,14 +223,6 @@ table {
     --mio-theme-color-ref-neutral-200: #c7c7c7;
     --mio-theme-color-ref-neutral-variant-50: #eef3fc;
     -webkit-font-smoothing: antialiased;
-}
-mwc-button {
-    --mdc-typography-button-font-family: var(--mio-theme-label-l-font-family);
-    --mdc-typography-button-font-size: var(--mio-theme-label-l-font-size);
-    --mdc-typography-button-line-height: var(--mio-theme-label-l-line-height);
-    --mdc-typography-button-font-weight: var(--mio-theme-label-l-font-weight);
-    --mdc-typography-button-text-transform: capitalize;
-    --mdc-typography-button-letter-spacing: 0;
 }
 * {
     box-sizing: border-box;
