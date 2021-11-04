@@ -4,34 +4,73 @@
 @import '~@angular/material/theming';
 // Plus imports for other components in your app.
 @import 'variables';
+@import '_palette';
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
 // Define a custom typography config that overrides the font-family as well as the
 $custom-typography: mat-typography-config(
-  $font-family: var(--font-family-sans-serif)
+ $font-family: var(--font-family-sans-serif),
+ $display-4: mat-typography-level(var(--mio-theme-display-xxl-font-size), $font-family:  var(--font-family-sans-serif)),
+ $display-3: mat-typography-level(var(--mio-theme-display-xl-font-size), $font-family:  var(--font-family-sans-serif)),
+ $display-2: mat-typography-level(var(--mio-theme-display-l-font-size), $font-family:  var(--font-family-sans-serif)),
+ $display-1: mat-typography-level(var(--mio-theme-display-m-font-size), $font-family:  var(--font-family-sans-serif)),
+ $headline: mat-typography-level(var(--mio-theme-headline-l-font-size), $font-family:  var(--font-family-sans-serif)),
+ $title: mat-typography-level(var(--mio-theme-title-l-font-size), $font-family:  var(--font-family-sans-serif)),
 );
 
 @include mat-core($custom-typography); 
 
+//Default palette
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$gui-primary: mat-palette($mat-indigo);
-$gui-accent: mat-palette($mat-pink, A200, A100, A400);
-
+$default-primary: mat-palette($mat-indigo);
+$default-accent: mat-palette($mat-pink, A200, A100, A400);
 // The warn palette is optional (defaults to red).
-$gui-warn: mat-palette($mat-red);
-
+$default-warn: mat-palette($mat-red);
 // Create the theme object (a Sass map containing all of the palettes).
-$gui-theme: mat-light-theme($gui-primary, $gui-accent, $gui-warn);
+$default-theme: mat-light-theme($default-primary, $default-accent, $default-warn);
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-@include angular-material-theme($gui-theme);
+
+//black palette
+$cmpnt-black-primary: mat-palette($cmpnt-black-palette);
+$cmpnt-black-accent: mat-palette($cmpnt-black-palette, A200, A100, A400);
+$cmpnt-black-warn: mat-palette($cmpnt-red-palette);
+$cmpnt-black-theme: mat-light-theme($cmpnt-black-primary, $cmpnt-black-accent, $cmpnt-black-warn);
+
+//red-gray palette
+$cmpnt-red-primary: mat-palette($cmpnt-red-palette);
+$cmpnt-red-accent: mat-palette($cmpnt-gray-palette, A200, A100, A400);
+$cmpnt-red-theme: mat-light-theme($cmpnt-red-primary, $cmpnt-red-accent);
+
+//blue-red palette
+$cmpnt-blue-primary: mat-palette($cmpnt-blue-palette);
+$cmpnt-blue-accent: mat-palette($cmpnt-red-palette, A200, A100, A400);
+$cmpnt-blue-theme: mat-light-theme($cmpnt-blue-primary, $cmpnt-blue-accent);
+
+// Define an alternate dark theme.
+$cmpnt-dark-primary: mat-palette($mat-blue-grey);
+$cmpnt-dark-accent: mat-palette($mat-amber, A200, A100, A400);
+$cmpnt-dark-warn: mat-palette($mat-deep-orange);
+$cmpnt-dark-theme: mat-dark-theme(
+  (
+    color: (
+      primary: $cmpnt-dark-primary,
+      accent: $cmpnt-dark-accent,
+      warn: $cmpnt-dark-warn,
+    ),
+  )
+);
+
+//include defined theme
+@include angular-material-theme($cmpnt-black-theme);
+.dark-theme {
+  @include angular-material-color($cmpnt-dark-theme);
+}
 @include angular-material-typography($custom-typography);
+
 
 html, body { height: 100%; }
 body { margin: 0; background-color: #fff;}

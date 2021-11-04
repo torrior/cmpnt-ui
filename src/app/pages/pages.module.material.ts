@@ -38,7 +38,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { PlatformModule } from '@angular/cdk/platform';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { CdkAccordionModule } from '@angular/cdk/accordion';
-
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   exports: [
     MatCommonModule,
@@ -80,6 +80,7 @@ import { CdkAccordionModule } from '@angular/cdk/accordion';
     PlatformModule,
     ScrollingModule,
     CdkAccordionModule,
+    ReactiveFormsModule
   ],
 })
 export class MaterialModule {}
