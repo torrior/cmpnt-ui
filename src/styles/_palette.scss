@@ -112,7 +112,7 @@ $cmpnt-black-palette: (
   800 : #171f24,
   900 : #0d1317,
   A100: #eceff1,
-  A200: #cfd8dc,
+  A200: #748f9b,
   A400: #b0bec5,
   A700: #90a4ae,
   contrast: (
@@ -127,8 +127,50 @@ $cmpnt-black-palette: (
     800: $cmpnt-light-primary-text,
     900: $cmpnt-light-primary-text,
     A100: $cmpnt-dark-primary-text,
-    A200: $cmpnt-dark-primary-text,
+    A200: $cmpnt-light-primary-text,
     A400: $cmpnt-dark-primary-text,
     A700: $cmpnt-dark-primary-text,
   ),
+);
+
+//Default palette
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$default-primary: mat-palette($mat-indigo);
+$default-accent: mat-palette($mat-pink, A200, A100, A400);
+// The warn palette is optional (defaults to red).
+$default-warn: mat-palette($mat-red);
+// Create the theme object (a Sass map containing all of the palettes).
+$default-theme: mat-light-theme($default-primary, $default-accent, $default-warn);
+
+
+//black palette
+$cmpnt-black-primary: mat-palette($cmpnt-black-palette);
+$cmpnt-black-accent: mat-palette($cmpnt-black-palette, A200, A100, A400);
+$cmpnt-black-warn: mat-palette($cmpnt-red-palette);
+$cmpnt-black-theme: mat-light-theme($cmpnt-black-primary, $cmpnt-black-accent, $cmpnt-black-warn);
+
+//red-gray palette
+$cmpnt-red-primary: mat-palette($cmpnt-red-palette);
+$cmpnt-red-accent: mat-palette($cmpnt-gray-palette, A700, A100, A400);
+$cmpnt-red-theme: mat-light-theme($cmpnt-red-primary, $cmpnt-red-accent);
+
+//blue-red palette
+$cmpnt-blue-primary: mat-palette($cmpnt-blue-palette);
+$cmpnt-blue-accent: mat-palette($cmpnt-red-palette, A200, A100, A400);
+$cmpnt-blue-theme: mat-light-theme($cmpnt-blue-primary, $cmpnt-blue-accent);
+
+// Define an alternate dark theme.
+$cmpnt-dark-primary: mat-palette($mat-blue-grey);
+$cmpnt-dark-accent: mat-palette($mat-amber, A200, A100, A400);
+$cmpnt-dark-warn: mat-palette($mat-deep-orange);
+$cmpnt-dark-theme: mat-dark-theme(
+  (
+    color: (
+      primary: $cmpnt-dark-primary,
+      accent: $cmpnt-dark-accent,
+      warn: $cmpnt-dark-warn,
+    ),
+  )
 );
