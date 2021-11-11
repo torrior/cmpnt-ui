@@ -80,7 +80,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     PlatformModule,
     ScrollingModule,
     CdkAccordionModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
 })
 export class MaterialModule {}

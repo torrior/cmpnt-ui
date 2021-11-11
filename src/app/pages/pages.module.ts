@@ -5,9 +5,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainComponent } from './main/main.component';
+import { MeComponent } from './me/me.component';
 
 @NgModule({
-  declarations: [MainComponent],
+  declarations: [MainComponent, MeComponent],
   imports: [
     CommonModule,
     MaterialModule,
