@@ -44,7 +44,7 @@ export class MainComponent implements OnInit {
     this._snackBar.open(message, action);
   }
 
-  clickBrowser(){
-    this.router.navigate(["me"]);
+  clickBrowser() {
+    this.router.navigate(['me']);
   }
 }

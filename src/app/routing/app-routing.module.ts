@@ -5,7 +5,7 @@ import { MainComponent } from '@app/pages/main/main.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
-  { path: 'me', component: MeComponent}
+  { path: 'me', component: MeComponent },
 ];
 
 @NgModule({
