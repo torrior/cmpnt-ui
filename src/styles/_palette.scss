@@ -1,0 +1,176 @@
+$cmpnt-dark-primary-text: rgb(38, 50, 56);
+$cmpnt-light-primary-text: white;
+
+$cmpnt-red-palette: (
+  50: #fae6e6,
+  100: #f2c1c1,
+  200: #e99797,
+  300: #e06d6d,
+  400: #da4e4e,
+  500: #d32f2f,
+  600: #ce2a2a,
+  700: #c82323,
+  800: #c21d1d,
+  900: #b71212,
+  A100: #ffe7e7,
+  A200: #ffb4b4,
+  A400: #ff8181,
+  A700: #ff6868,
+  contrast: (
+    50: $cmpnt-dark-primary-text,
+    100: $cmpnt-dark-primary-text,
+    200: $cmpnt-dark-primary-text,
+    300: $cmpnt-dark-primary-text,
+    400: $cmpnt-dark-primary-text,
+    500: $cmpnt-light-primary-text,
+    600: $cmpnt-light-primary-text,
+    700: $cmpnt-light-primary-text,
+    800: $cmpnt-light-primary-text,
+    900: $cmpnt-light-primary-text,
+    A100: $cmpnt-dark-primary-text,
+    A200: $cmpnt-light-primary-text,
+    A400: $cmpnt-light-primary-text,
+    A700: $cmpnt-light-primary-text,
+  ),
+);
+
+$cmpnt-blue-palette: (
+  50: #e4eefc,
+  100: #bad5f8,
+  200: #8db9f4,
+  300: #5f9def,
+  400: #3c88eb,
+  500: #1a73e8,
+  600: #176be5,
+  700: #1360e2,
+  800: #0f56de,
+  900: #0843d8,
+  A100: #ffffff,
+  A200: #cfdaff,
+  A400: #9cb3ff,
+  A700: #829fff,
+  contrast: (
+    50: $cmpnt-dark-primary-text,
+    100: $cmpnt-dark-primary-text,
+    200: $cmpnt-dark-primary-text,
+    300: $cmpnt-dark-primary-text,
+    400: $cmpnt-dark-primary-text,
+    500: $cmpnt-light-primary-text,
+    600: $cmpnt-light-primary-text,
+    700: $cmpnt-light-primary-text,
+    800: $cmpnt-light-primary-text,
+    900: $cmpnt-light-primary-text,
+    A100: $cmpnt-dark-primary-text,
+    A200: $cmpnt-light-primary-text,
+    A400: $cmpnt-light-primary-text,
+    A700: $cmpnt-light-primary-text,
+  ),
+);
+
+$cmpnt-gray-palette: (
+  50: #eceff1,
+  100: #cfd8dc,
+  200: #b0bec5,
+  300: #90a4ae,
+  400: #78909c,
+  500: #607d8b,
+  600: #546e7a,
+  700: #455a64,
+  800: #37474f,
+  900: #263238,
+  A100: #cfd8dc,
+  A200: #b0bec5,
+  A400: #78909c,
+  A700: #455a64,
+  contrast: (
+    50: $cmpnt-dark-primary-text,
+    100: $cmpnt-dark-primary-text,
+    200: $cmpnt-dark-primary-text,
+    300: $cmpnt-light-primary-text,
+    400: $cmpnt-light-primary-text,
+    500: $cmpnt-light-primary-text,
+    600: $cmpnt-light-primary-text,
+    700: $cmpnt-light-primary-text,
+    800: $cmpnt-light-primary-text,
+    900: $cmpnt-light-primary-text,
+    A100: $cmpnt-dark-primary-text,
+    A200: $cmpnt-dark-primary-text,
+    A400: $cmpnt-light-primary-text,
+    A700: $cmpnt-light-primary-text,
+  ),
+);
+
+$cmpnt-black-palette: (
+  50 : #e5e6e7,
+  100 : #bec2c3,
+  200 : #93999c,
+  300 : #677074,
+  400 : #475156,
+  500 : #263238,
+  600 : #222d32,
+  700 : #1c262b,
+  800 : #171f24,
+  900 : #0d1317,
+  A100: #eceff1,
+  A200: #748f9b,
+  A400: #b0bec5,
+  A700: #90a4ae,
+  contrast: (
+    50: $cmpnt-dark-primary-text,
+    100: $cmpnt-dark-primary-text,
+    200: $cmpnt-dark-primary-text,
+    300: $cmpnt-light-primary-text,
+    400: $cmpnt-light-primary-text,
+    500: $cmpnt-light-primary-text,
+    600: $cmpnt-light-primary-text,
+    700: $cmpnt-light-primary-text,
+    800: $cmpnt-light-primary-text,
+    900: $cmpnt-light-primary-text,
+    A100: $cmpnt-dark-primary-text,
+    A200: $cmpnt-light-primary-text,
+    A400: $cmpnt-dark-primary-text,
+    A700: $cmpnt-dark-primary-text,
+  ),
+);
+
+//Default palette
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$default-primary: mat-palette($mat-indigo);
+$default-accent: mat-palette($mat-pink, A200, A100, A400);
+// The warn palette is optional (defaults to red).
+$default-warn: mat-palette($mat-red);
+// Create the theme object (a Sass map containing all of the palettes).
+$default-theme: mat-light-theme($default-primary, $default-accent, $default-warn);
+
+
+//black palette
+$cmpnt-black-primary: mat-palette($cmpnt-black-palette);
+$cmpnt-black-accent: mat-palette($cmpnt-black-palette, A200, A100, A400);
+$cmpnt-black-warn: mat-palette($cmpnt-red-palette);
+$cmpnt-black-theme: mat-light-theme($cmpnt-black-primary, $cmpnt-black-accent, $cmpnt-black-warn);
+
+//red-gray palette
+$cmpnt-red-primary: mat-palette($cmpnt-red-palette);
+$cmpnt-red-accent: mat-palette($cmpnt-gray-palette, A700, A100, A400);
+$cmpnt-red-theme: mat-light-theme($cmpnt-red-primary, $cmpnt-red-accent);
+
+//blue-red palette
+$cmpnt-blue-primary: mat-palette($cmpnt-blue-palette);
+$cmpnt-blue-accent: mat-palette($cmpnt-red-palette, A200, A100, A400);
+$cmpnt-blue-theme: mat-light-theme($cmpnt-blue-primary, $cmpnt-blue-accent);
+
+// Define an alternate dark theme.
+$cmpnt-dark-primary: mat-palette($mat-blue-grey);
+$cmpnt-dark-accent: mat-palette($mat-amber, A200, A100, A400);
+$cmpnt-dark-warn: mat-palette($mat-deep-orange);
+$cmpnt-dark-theme: mat-dark-theme(
+  (
+    color: (
+      primary: $cmpnt-dark-primary,
+      accent: $cmpnt-dark-accent,
+      warn: $cmpnt-dark-warn,
+    ),
+  )
+);
