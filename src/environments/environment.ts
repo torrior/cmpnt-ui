@@ -4,8 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: '',
-  baseUrl: 'cmnpt-ui'
+  apiUrl: ''
 };
 
 /*

@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
   apiUrl: '',
-  baseUrl: 'cmnpt-ui'
+  baseUrl: 'https://torrior.github.io/cmnpt-ui/'
 };
