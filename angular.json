@@ -32,10 +32,7 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              "src/assets/img",
-              "src/assets/fonts",
-              "src/assets/i18n"
+              "src/assets"
             ],
             "styles": [
               "src/styles/fonts.scss",
