@@ -9,9 +9,7 @@ import { TranslocoRootModule } from './translate/transloco-root.module';
 
 @NgModule({
   declarations: [AppComponent],
-  entryComponents: [
-    AppComponent
-  ],
+  entryComponents: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

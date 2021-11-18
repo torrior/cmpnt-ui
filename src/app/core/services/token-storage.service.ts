@@ -6,9 +6,8 @@ const TOKEN_KEY = 'auth-token';
 const LANG_KEY = 'lang';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-
 export class TokenStorageService {
   getUser(): User {
     const user = JSON.parse(localStorage.getItem(USER_KEY) || '{}') as User;
@@ -45,12 +44,12 @@ export class TokenStorageService {
     localStorage.setItem(LANG_KEY, JSON.stringify(lang));
   }
 
-  getCookies(name: string): any {
+  getCookies(name: string): string {
     const value = JSON.parse(localStorage.getItem(name) || '{}') as string;
     return value;
   }
 
-  setCookies(name: string, value: any): void {
+  setCookies(name: string, value: unknown): void {
     localStorage.setItem(name, JSON.stringify(value));
   }
 
