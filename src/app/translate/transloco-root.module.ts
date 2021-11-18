@@ -5,7 +5,7 @@ import {
   TranslocoLoader,
   TRANSLOCO_CONFIG,
   translocoConfig,
-  TranslocoModule
+  TranslocoModule,
 } from '@ngneat/transloco';
 import { Injectable, NgModule } from '@angular/core';
 import { environment } from '../../environments/environment';
@@ -15,20 +15,21 @@ import { catchError } from 'rxjs';
 @Injectable()
 export class TranslocoHttpLoader implements TranslocoLoader {
   private handleError: HandleError;
-  constructor(private http: HttpClient,
-    httpErrorHandler: HttpErrorHandler) {
+  constructor(private http: HttpClient, httpErrorHandler: HttpErrorHandler) {
     this.handleError = httpErrorHandler.createHandleError('MessagesService');
   }
 
   getTranslation(langPath: string) {
-    return this.http.get<Translation>(`./assets/i18n/${langPath}.json`).pipe(
-      catchError(this.handleError<Translation>('getTranslation', undefined))
-    );
+    return this.http
+      .get<Translation>(`./assets/i18n/${langPath}.json`)
+      .pipe(
+        catchError(this.handleError<Translation>('getTranslation', undefined))
+      );
   }
 }
 
 @NgModule({
-  exports: [ TranslocoModule ],
+  exports: [TranslocoModule],
   providers: [
     {
       provide: TRANSLOCO_CONFIG,
@@ -40,11 +41,11 @@ export class TranslocoHttpLoader implements TranslocoLoader {
         reRenderOnLangChange: true,
         prodMode: environment.production,
         flatten: {
-          aot: environment.production
-        }
-      })
+          aot: environment.production,
+        },
+      }),
     },
-    { provide: TRANSLOCO_LOADER, useClass: TranslocoHttpLoader }
-  ]
+    { provide: TRANSLOCO_LOADER, useClass: TranslocoHttpLoader },
+  ],
 })
 export class TranslocoRootModule {}

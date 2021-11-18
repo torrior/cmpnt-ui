@@ -5,13 +5,16 @@ import { LoggingService } from './logging.service';
 
 export interface RequestCacheEntry {
   url: string;
-  response: HttpResponse<any>;
+  response: HttpResponse<unknown>;
   lastRead: number;
 }
 
 export abstract class RequestCache {
-  abstract get(req: HttpRequest<any>): HttpResponse<any> | undefined;
-  abstract put(req: HttpRequest<any>, response: HttpResponse<any>): void;
+  abstract get(req: HttpRequest<unknown>): HttpResponse<unknown> | undefined;
+  abstract put(
+    req: HttpRequest<unknown>,
+    response: HttpResponse<unknown>
+  ): void;
   abstract clear(): void;
 }
 
@@ -19,12 +22,11 @@ const maxAge = 60000 * 15; // maximum cache age (ms) 15 min
 
 @Injectable()
 export class RequestCacheWithMap implements RequestCache {
-
   cache = new Map<string, RequestCacheEntry>();
 
-  constructor(private logger: LoggingService) { }
+  constructor(private logger: LoggingService) {}
 
-  get(req: HttpRequest<any>): HttpResponse<any> | undefined {
+  get(req: HttpRequest<unknown>): HttpResponse<unknown> | undefined {
     const url = req.urlWithParams;
     const cached = this.cache.get(url);
 
@@ -32,14 +34,14 @@ export class RequestCacheWithMap implements RequestCache {
       return undefined;
     }
 
-    const isExpired = cached.lastRead < (Date.now() - maxAge);
+    const isExpired = cached.lastRead < Date.now() - maxAge;
     const expired = isExpired ? 'expired ' : '';
-    
+
     this.logger.info(`Found ${expired} cached response for "${url}".`);
     return isExpired ? undefined : cached.response;
   }
 
-  put(req: HttpRequest<any>, response: HttpResponse<any>): void {
+  put(req: HttpRequest<unknown>, response: HttpResponse<unknown>): void {
     const url = req.urlWithParams;
     this.logger.info(`Caching response from "${url}".`);
 
@@ -48,7 +50,7 @@ export class RequestCacheWithMap implements RequestCache {
 
     // remove expired cache entries
     const expired = Date.now() - maxAge;
-    this.cache.forEach(entry => {
+    this.cache.forEach((entry) => {
       if (entry.lastRead < expired) {
         this.cache.delete(entry.url);
       }
@@ -58,7 +60,8 @@ export class RequestCacheWithMap implements RequestCache {
   }
 
   clear(): void {
-    this.cache.forEach(entry => { {
+    this.cache.forEach((entry) => {
+      {
         this.cache.delete(entry.url);
       }
     });

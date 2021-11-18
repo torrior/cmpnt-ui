@@ -7,9 +7,7 @@ import { TranslocoService } from '@ngneat/transloco';
   templateUrl: './app.component.html',
 })
 export class AppComponent implements OnInit {
-  constructor(
-    private translate: TranslocoService,
-    private title: Title) {
+  constructor(private translate: TranslocoService, private title: Title) {
     title.setTitle('CMPNT UI|UX examples');
   }
   ngOnInit(): void {
