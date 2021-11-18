@@ -1,4 +1,4 @@
-$montserrat-font-path: "/assets/fonts";
+$montserrat-font-path: "../assets/fonts";
 
 @font-face {
     src: url("#{$montserrat-font-path}/montserrat_light.ttf") format("truetype");
